@@ -12,3 +12,16 @@ export const Titulo = styled.Text`
     color: #fff;
     text-align: center;
 `;
+
+export const BotaoAdd = styled.TouchableOpacity`
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: #0094ff;
+    justify-content: center;
+    align-items: center;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9;
+`;
