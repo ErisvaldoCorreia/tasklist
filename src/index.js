@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, Modal } from 'react-native';
-import { Container, Titulo, Botao } from './styles';
-import { Ionicons } from '@expo/vector-icons';
+import { Container, Titulo, Botao, Header, Theme } from './styles';
+import { Ionicons, Feather } from '@expo/vector-icons';
 import TaskList from './TaskList';
 
 export default function Home() {
@@ -12,22 +12,19 @@ export default function Home() {
         { key: 3, task: 'Terceira Tarefa Teste'},
         { key: 4, task: 'Quarta Tarefa Teste'},
         { key: 5, task: 'Primeira Tarefa Teste'},
-        { key: 6, task: 'Segunda Tarefa Teste'},
-        { key: 7, task: 'Terceira Tarefa Teste'},
-        { key: 8, task: 'Quarta Tarefa Teste'},
-        { key: 9, task: 'Segunda Tarefa Teste'},
-        { key: 10, task: 'Terceira Tarefa Teste'},
-        { key: 11, task: 'Quarta Tarefa Teste'},
-        { key: 12, task: 'Segunda Tarefa Teste'},
-        { key: 13, task: 'Terceira Tarefa Teste'},
-        { key: 14, task: 'Quarta Tarefa Teste'},
     ]);
     const [open, setOpen] = useState(false);
 
   return (
     <Container>
       
-      <Titulo>TaskList</Titulo>
+        <Header>
+            <Titulo>Task List</Titulo>
+            <Theme>
+                <Feather name="moon" size={22} color="#fff" />
+            </Theme>
+        </Header>
+
 
       <FlatList
         marginHorizontal={15}
@@ -50,8 +47,13 @@ export default function Home() {
           </Container>
       </Modal>
 
-        <Botao animation="bounceInUp" useNativeDriver duration={1200} onPress={() => setOpen(true)}>
-            <Ionicons name="ios-add" size={35} color="#fff" />
+        <Botao 
+            animation="bounceInUp" 
+            useNativeDriver 
+            duration={1200} 
+            onPress={() => setOpen(true)}
+        >
+            <Ionicons name="ios-add" size={40} color="#fff" />
         </Botao>
 
     </Container>

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tarefas",
+    "name": "Task List",
     "slug": "tarefas",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#171d31"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

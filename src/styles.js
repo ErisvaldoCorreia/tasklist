@@ -7,11 +7,29 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const Titulo = styled.Text`
-    margin-top: 35px;
-    padding-bottom: 20px;
     font-size: 25px;
     color: #fff;
     text-align: center;
+`;
+
+export const Header = styled.View`
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+`;
+
+export const Theme = styled.TouchableOpacity`
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background: #525659;
+    justify-content: center;
+    align-items: center;
 `;
 
 const BotaoAdd = styled.TouchableOpacity`
