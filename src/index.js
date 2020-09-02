@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, Modal } from 'react-native';
 import { Container, Titulo, BotaoAdd } from './styles';
 import { Ionicons } from '@expo/vector-icons';
-
-import * as Animatable from 'react-native-animatable';
 import TaskList from './TaskList';
 
 export default function Home() {
@@ -14,6 +12,7 @@ export default function Home() {
         { key: 3, task: 'Tarefa Teste'},
         { key: 4, task: 'Tarefa Teste'},
     ]);
+    const [open, setOpen] = useState(false);
 
   return (
     <Container>
@@ -28,16 +27,22 @@ export default function Home() {
         renderItem={ ({item}) => <TaskList data={item} /> }
       />
 
-    <Animatable.View 
-        useNativeDriver
-        animation="bounceInUp"
-        duration={1200}
-    >
-      <BotaoAdd>
-          <Ionicons name="ios-add" size={35} color="#fff" />
-      </BotaoAdd>
-    </Animatable.View>
+      <Modal 
+        animationType="slide" 
+        transparent={false} 
+        visible={open} 
+      >
+          <Container>
+              <Titulo>Modal Aberto :)</Titulo>
+              <BotaoAdd onPress={() => setOpen(false)}>
+                <Ionicons name="ios-close" size={35} color="#fff" />
+              </BotaoAdd>
+          </Container>
+      </Modal>
 
+        <BotaoAdd onPress={() => setOpen(true)}>
+            <Ionicons name="ios-add" size={35} color="#fff" />
+        </BotaoAdd>
 
     </Container>
   );
