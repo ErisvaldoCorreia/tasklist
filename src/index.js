@@ -5,7 +5,7 @@ import { Ionicons, Feather } from '@expo/vector-icons';
 import TaskList from './TaskList';
 import ModalContent from './ModalContent';
 
-export default function Home() {
+export default function Home({switchTheme}) {
 
   const [task, setTask] = useState([
     { key: 1, task: 'Primeira Tarefa Teste' },
@@ -21,7 +21,7 @@ export default function Home() {
 
       <Header>
         <Titulo>Task List</Titulo>
-        <Theme>
+        <Theme onPress={switchTheme} >
           <Feather name="moon" size={22} color="#fff" />
         </Theme>
       </Header>
