@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 import { Container, Titulo, BotaoAdd } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 
+import * as Animatable from 'react-native-animatable';
 import TaskList from './TaskList';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         { key: 1, task: 'Tarefa Teste'},
         { key: 2, task: 'Tarefa Teste'},
         { key: 3, task: 'Tarefa Teste'},
+        { key: 4, task: 'Tarefa Teste'},
     ]);
 
   return (
@@ -26,9 +28,16 @@ export default function Home() {
         renderItem={ ({item}) => <TaskList data={item} /> }
       />
 
+    <Animatable.View 
+        useNativeDriver
+        animation="bounceInUp"
+        duration={1200}
+    >
       <BotaoAdd>
           <Ionicons name="ios-add" size={35} color="#fff" />
       </BotaoAdd>
+    </Animatable.View>
+
 
     </Container>
   );
