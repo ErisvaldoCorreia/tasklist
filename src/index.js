@@ -3,6 +3,8 @@ import { FlatList } from 'react-native';
 import { Container, Titulo, BotaoAdd } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 
+import TaskList from './TaskList';
+
 export default function Home() {
 
     const [task, setTask] = useState([
@@ -17,6 +19,7 @@ export default function Home() {
       <Titulo>TaskList</Titulo>
 
       <FlatList
+        marginHorizontal={15}
         showsHorizontalScrollIndicator={false}
         data={task}
         keyExtractor={ (item) => String(item.key) }
