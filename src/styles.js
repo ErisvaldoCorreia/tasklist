@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import * as Animatable from 'react-native-animatable';
 
 export const Container = styled.SafeAreaView`
     flex: 1;
@@ -13,7 +14,7 @@ export const Titulo = styled.Text`
     text-align: center;
 `;
 
-export const BotaoAdd = styled.TouchableOpacity`
+const BotaoAdd = styled.TouchableOpacity`
     position: absolute;
     width: 60px;
     height: 60px;
@@ -25,3 +26,5 @@ export const BotaoAdd = styled.TouchableOpacity`
     bottom: 25px;
     z-index: 9;
 `;
+
+export const Botao = Animatable.createAnimatableComponent(BotaoAdd);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlatList, Modal } from 'react-native';
-import { Container, Titulo, BotaoAdd } from './styles';
+import { Container, Titulo, Botao } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 import TaskList from './TaskList';
 
@@ -34,15 +34,15 @@ export default function Home() {
       >
           <Container>
               <Titulo>Modal Aberto :)</Titulo>
-              <BotaoAdd onPress={() => setOpen(false)}>
+              <Botao onPress={() => setOpen(false)}>
                 <Ionicons name="ios-close" size={35} color="#fff" />
-              </BotaoAdd>
+              </Botao>
           </Container>
       </Modal>
 
-        <BotaoAdd onPress={() => setOpen(true)}>
+        <Botao animation="bounceInUp" useNativeDriver duration={1200} onPress={() => setOpen(true)}>
             <Ionicons name="ios-add" size={35} color="#fff" />
-        </BotaoAdd>
+        </Botao>
 
     </Container>
   );
