@@ -3,12 +3,12 @@ import * as Animatable from 'react-native-animatable';
 
 export const Container = styled.SafeAreaView`
     flex: 1;
-    background: #171d31;
+    background: ${props => props.theme.color1};
 `;
 
 export const Titulo = styled.Text`
     font-size: 25px;
-    color: #fff;
+    color: ${props => props.theme.blank};
     text-align: center;
 `;
 
@@ -27,7 +27,7 @@ export const Theme = styled.TouchableOpacity`
     width: 36px;
     height: 36px;
     border-radius: 18px;
-    background: #525659;
+    background: ${props => props.theme.color2};
     justify-content: center;
     align-items: center;
 `;
@@ -37,7 +37,7 @@ const BotaoAdd = styled.TouchableOpacity`
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    background: #0094ff;
+    background: ${props => props.theme.color3};
     justify-content: center;
     align-items: center;
     right: 25px;

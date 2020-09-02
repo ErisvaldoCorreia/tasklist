@@ -1,6 +1,7 @@
 export default {
-    color: '#000', 
-    background: '#fff',
-    botao: '#4d3913',
-    textobotao: '#e0b867',
+    blank: '#171d31',
+    color1: '#fff', 
+    color2: '#0094ff',
+    color3: '#121212',
+    color4: '#525659',
 };
