@@ -7,10 +7,20 @@ import TaskList from './TaskList';
 export default function Home() {
 
     const [task, setTask] = useState([
-        { key: 1, task: 'Tarefa Teste'},
-        { key: 2, task: 'Tarefa Teste'},
-        { key: 3, task: 'Tarefa Teste'},
-        { key: 4, task: 'Tarefa Teste'},
+        { key: 1, task: 'Primeira Tarefa Teste'},
+        { key: 2, task: 'Segunda Tarefa Teste'},
+        { key: 3, task: 'Terceira Tarefa Teste'},
+        { key: 4, task: 'Quarta Tarefa Teste'},
+        { key: 5, task: 'Primeira Tarefa Teste'},
+        { key: 6, task: 'Segunda Tarefa Teste'},
+        { key: 7, task: 'Terceira Tarefa Teste'},
+        { key: 8, task: 'Quarta Tarefa Teste'},
+        { key: 9, task: 'Segunda Tarefa Teste'},
+        { key: 10, task: 'Terceira Tarefa Teste'},
+        { key: 11, task: 'Quarta Tarefa Teste'},
+        { key: 12, task: 'Segunda Tarefa Teste'},
+        { key: 13, task: 'Terceira Tarefa Teste'},
+        { key: 14, task: 'Quarta Tarefa Teste'},
     ]);
     const [open, setOpen] = useState(false);
 
@@ -21,10 +31,10 @@ export default function Home() {
 
       <FlatList
         marginHorizontal={15}
-        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
         data={task}
         keyExtractor={ (item) => String(item.key) }
-        renderItem={ ({item}) => <TaskList data={item} /> }
+        renderItem={ ({item}) => <TaskList data={item}/> }
       />
 
       <Modal 
